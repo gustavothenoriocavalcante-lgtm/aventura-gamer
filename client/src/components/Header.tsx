@@ -15,16 +15,17 @@ export function Header({ activeSection, onSectionChange }: HeaderProps) {
 
   return (
     <header
-      className="sticky top-0 z-30 bg-white/95 backdrop-blur-sm"
+      className="sticky top-0 z-20 bg-white/95 backdrop-blur-sm isolate" 
       style={{
         borderBottom: "2px solid rgba(34,197,94,0.15)",
         boxShadow: "0 2px 12px rgba(34,197,94,0.08)",
       }}
     >
-      <div className="container">
-        <div className="flex items-center justify-between h-16 gap-4">
-          {/* Logo */}
-          <div className="flex items-center gap-3 flex-shrink-0">
+{/* Substitua a div interna do <header> por esta abaixo */}
+<div className="w-full max-w-7xl mx-auto px-6 md:px-12">
+  <div className="flex items-center justify-between h-16 gap-4">
+    {/* Logo e Título com margem de segurança */}
+    <div className="flex items-center gap-3 flex-shrink-0">
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663768359059/PFNdfEZkt4rFciRAiuHLFa/logo-aventura-gamer-kmjSvG2ZU5LQDVuvvKUV5r.webp"
               alt="AVENTURA GAMER"
