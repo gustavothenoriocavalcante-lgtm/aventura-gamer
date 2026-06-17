@@ -63,12 +63,6 @@ export default function Home() {
           >
             AVENTURA GAMER — Portal de Jogos Escolares
           </p>
-          <p
-            className="text-xs text-gray-300 mt-1"
-            style={{ fontFamily: "Nunito, sans-serif" }}
-          >
-            Feito com 💚 pelos alunos da turma
-          </p>
         </div>
       </footer>
     </div>

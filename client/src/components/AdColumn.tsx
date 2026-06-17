@@ -181,14 +181,16 @@ export function AdColumn() {
       {/* Separator */}
       <hr className="dashed-separator" />
 
-      {/* QR Code section */}
+{/* QR Code section */}
       <div className="text-center">
         <p className="text-xs text-gray-400 font-semibold mb-2" style={{ fontFamily: "Space Mono, monospace" }}>
           COMPARTILHE
         </p>
         <div className="bg-white rounded-xl border-2 border-green-100 p-3 inline-block">
+          
+          {/* Usando a sua imagem pronta sem instalar nenhuma biblioteca externa */}
           <img
-            src="/qrcode.png"
+            src={`${import.meta.env.BASE_URL}codefacil.png`}
             alt="QR Code do portal"
             className="w-28 h-28 object-contain mx-auto"
             onError={(e) => {
@@ -198,6 +200,7 @@ export function AdColumn() {
             }}
           />
           <div className="hidden text-4xl text-center">📱</div>
+          
           <p className="text-xs text-gray-500 mt-1" style={{ fontFamily: "Nunito, sans-serif" }}>
             Escaneie para abrir
           </p>

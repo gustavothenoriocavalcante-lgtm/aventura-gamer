@@ -98,10 +98,10 @@ export function Header({ activeSection, onSectionChange }: HeaderProps) {
           style={{ transformOrigin: "top right" }}
         >
           <p className="text-xs text-gray-500 text-center mb-2" style={{ fontFamily: "Nunito, sans-serif" }}>
-            Escaneie para abrir o portal
+            Escaneie para abrir o qr code
           </p>
           <img
-            src="/qrcode.png"
+            src={`${import.meta.env.BASE_URL}codefacil.png`}
             alt="QR Code"
             className="w-32 h-32 object-contain"
             onError={(e) => {
