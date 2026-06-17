@@ -207,7 +207,7 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   plugins,
-  base: process.env.NODE_ENV === "production" ? "/aventura-gamer/" : "/", // 🌟 ADICIONADO: Essencial para o GitHub Pages achar os arquivos corretos!
+  base: "/aventura-gamer/",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
