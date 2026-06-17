@@ -268,31 +268,30 @@ export function Forum() {
     return () => unsub();
   }, []);
 
-  const handlePost = async () => {
-    if (!newMessage.trim()) return;
-    if (!profile) {
-      toast.error("Crie seu perfil primeiro!");
-      return;
-    }
-    setIsPosting(true);
-    try {
-      await addDoc(collection(db, "forum"), {
-        author: profile.name,
-        avatar: profile.avatar,
-        message: newMessage.trim(),
-        createdAt: serverTimestamp(),
-        replyTo: replyTo?.id || null,
-        pinned: false,
-      });
-      setNewMessage("");
-      setReplyTo(null);
-      toast.success("Mensagem enviada!");
-    } catch {
-      toast.error("Erro ao enviar. Configure o Firebase para usar o fórum!");
-    } finally {
-      setIsPosting(false);
-    }
-  };
+const handlePost = async () => {
+  if (!newMessage.trim()) return;
+
+  console.log("Tentando enviar");
+
+  try {
+
+    const docRef = await addDoc(
+      collection(db, "forum"),
+      {
+        author: profile?.name || "teste",
+        message: newMessage,
+        createdAt: serverTimestamp()
+      }
+    );
+
+    console.log("SALVOU", docRef.id);
+
+    setNewMessage("");
+
+  } catch (e) {
+    console.log("ERRO FIREBASE:", e);
+  }
+};
 
   const handleReply = (postId: string, authorName: string) => {
     setReplyTo({ id: postId, author: authorName });
