@@ -102,7 +102,7 @@ export function Header({ activeSection, onSectionChange }: HeaderProps) {
             Escaneie para abrir o qr code
           </p>
           <img
-            src={`${import.meta.env.BASE_URL}codefacil.png`}
+            src={`${import.meta.env.BASE_URL}qr-firebase.png`}
             alt="QR Code"
             className="w-32 h-32 object-contain"
             onError={(e) => {

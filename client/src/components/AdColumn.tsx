@@ -190,7 +190,7 @@ export function AdColumn() {
           
           {/* Usando a sua imagem pronta sem instalar nenhuma biblioteca externa */}
           <img
-            src={`${import.meta.env.BASE_URL}codefacil.png`}
+            src={`${import.meta.env.BASE_URL}qr-firebase.png`}
             alt="QR Code do portal"
             className="w-28 h-28 object-contain mx-auto"
             onError={(e) => {
